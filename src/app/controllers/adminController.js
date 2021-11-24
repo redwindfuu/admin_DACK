@@ -1,3 +1,4 @@
+const adminservice = require('../services/adminService');
 
 class adminController{
     //[GET]: /admin/account-manager
@@ -28,10 +29,13 @@ class adminController{
     receiptD(req,res,next){
         res.render('receipt-detail', { title: "Book Selling" });
     }
-
-    login(req,res,next){
+    //[GET]: /admin/login
+    async login(req,res,next){
+        const acc = await adminservice.oneAd(); 
+        res.send(acc);
         res.render('login', { title: "Book Selling" });
     }
+    //[GET]: /admin/forget
     forgetpass(req,res,next){
         res.render('forgetpass', { title: "Book Selling" });
     }
