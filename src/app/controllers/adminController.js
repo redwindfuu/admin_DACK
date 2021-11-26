@@ -19,8 +19,8 @@ class adminController {
             gia : req.body.gia,
             SL : 0,
         });
-        //res.send(req.body)
-        //res.redirect('back')
+
+        res.redirect('back')
         next();
     }
     //[GET] : /book/input-new-book
