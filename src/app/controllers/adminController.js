@@ -7,6 +7,7 @@ class adminController {
     //[POST]: /book/store
     async store(req, res, next) {
         req.body.masach = await adminservice.genKeybook(req.body.hinhthuc);
+        
         const book = await adminservice.getsachs().create({
             masach: req.body.masach,
             tensach: req.body.tensach,
@@ -14,11 +15,12 @@ class adminController {
             MOTA : req.body.MOTA,
             HINHANH : req.body.HINHANH,
             manxb : req.body.manxb,
-            NgayXB : req.body.ngayXB,
+            ngayXB : req.body.ngayXB,
             gia : req.body.gia,
             SL : 0,
         });
-        res.redirect('back')
+        //res.send(req.body)
+        //res.redirect('back')
         next();
     }
     //[GET] : /book/input-new-book
