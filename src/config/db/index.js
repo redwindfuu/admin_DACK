@@ -2,7 +2,6 @@ const Sequelize = require('sequelize');
 
 const initModels = require("../../app/models/init-models");
 
-// 
 
 
 // Option 1: Passing parameters separately

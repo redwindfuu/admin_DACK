@@ -6,8 +6,8 @@ const logger = require('morgan');
 const handlebars = require('express-handlebars')
 const routes = require('./routes')
 
-// const indexRouter = require('./routes/index');
-// const usersRouter = require('./routes/users');
+
+
 
 const app = express();
 
@@ -24,8 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 routes(app);
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
 
 
 
